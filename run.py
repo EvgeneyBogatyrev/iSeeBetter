@@ -5,7 +5,11 @@ from pathlib import Path
 os.system("chmod -R 0777 /model")
 
 with open("/model/run.sh", 'w') as f:
-    
+   
+    f.write("cd /model/pyflow\n")
+    f.write("python3 setup.py build_ext -i\n")
+    f.write("cp pyflow*.so ..\n")
+
     videos = os.listdir("/dataset")
     for video in videos:
         f.write(f"mkdir /model/result/{video}\n")
