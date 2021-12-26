@@ -10,6 +10,8 @@ with open("/model/run.sh", 'w') as f:
     f.write("python3 setup.py build_ext -i\n")
     f.write("cp pyflow*.so ..\n")
 
+    f.write("mkdir /model/result")
+
     videos = os.listdir("/dataset")
     for video in videos:
         f.write(f"mkdir /model/result/{video}\n")

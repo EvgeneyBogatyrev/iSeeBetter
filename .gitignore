@@ -6,6 +6,7 @@ SRGAN/
 Vid4/
 vimeo90k/
 __pycache__/
+result/
 # Folders
 vimeo_septuplet/
 
